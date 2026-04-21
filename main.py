@@ -21,7 +21,8 @@ async def run_benchmark_with_results(agent_version: str):
         print("❌ File data/golden_set.jsonl rỗng. Hãy tạo ít nhất 1 test case.")
         return None, None
 
-    runner = BenchmarkRunner(MainAgent(), ExpertEvaluator(), LLMJudge())
+    is_v1 = "v1" in agent_version.lower()
+    runner = BenchmarkRunner(MainAgent(top_k=1 if is_v1 else 3), ExpertEvaluator(), LLMJudge(["gpt-4.1-nano", "gpt-5-nano"]))
     results = await runner.run_all(dataset)
     if not results:
         print("❌ Không có kết quả benchmark.")

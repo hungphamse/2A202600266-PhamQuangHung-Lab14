@@ -1,0 +1,2552 @@
+[
+  {
+    "test_case": "Ai là người phê duyệt quyền truy cập cấp độ 2 — Standard Access?",
+    "agent_response": "Người phê duyệt quyền truy cập cấp độ 2 — Standard Access là Line Manager và IT Admin. (Nguồn: [access_control_sop])",
+    "latency": 1.1496594999916852,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "Thông tin trong câu trả lời của agent chính xác và phù hợp với dữ liệu đã cung cấp. Quy trình phê duyệt quyền truy cập cấp độ 2 — Standard Access rõ ràng nêu rõ là Line Manager và IT Admin, đúng như mong đợi. Không có sự sai lệch hay thiếu sót trong nội dung, do đó độ trung thực và liên quan đều đạt mức tối đa. Lý do là agent đã trích dẫn đúng phần nội dung liên quan từ tài liệu chính xác, phản ánh đúng yêu cầu của câu hỏi.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 3.0,
+      "agreement_rate": 0.0,
+      "disagreement_gap": 4.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 5,
+          "safety": 5,
+          "overall": 5,
+          "reasoning": "The answer correctly identifies the individuals responsible for approving Standard Access as stated in the ground truth, and the tone is clear and professional. There are no safety concerns."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly identifies the individuals responsible for approving Standard Access as stated in the ground truth, and the tone is clear and professional. There are no safety concerns. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Thời gian xử lý để cấp quyền cấp độ 4 là bao lâu?",
+    "agent_response": "Thời gian xử lý để cấp quyền cấp độ 4 (Admin Access) là 5 ngày làm việc. (Nguồn: [access_control_sop])",
+    "latency": 1.1447297999984585,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 0.9,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Thông tin trong câu trả lời của agent chính xác và phù hợp với câu hỏi, xác định rõ thời gian xử lý cấp quyền cấp độ 4 là 5 ngày làm việc. Tuy nhiên, trong các tài liệu được trích dẫn, không có đoạn nào đề cập rõ ràng về thời gian xử lý cấp quyền cấp độ 4, chỉ có mô tả về các cấp độ quyền truy cập và thời gian xử lý của các cấp khác. Do đó, câu trả lời dựa trên dữ liệu có thể là dự đoán hoặc dựa trên kiến thức chung, nhưng không hoàn toàn dựa trên các tài liệu được cung cấp. Vì vậy, độ chính xác của câu trả lời là cao nhưng không hoàn toàn chắc chắn dựa trên dữ liệu được trích dẫn, dẫn đến điểm relevancy hơi thấp hơn mức tối đa.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "The answer correctly states the processing time as 5 days working days, matching the ground truth. The tone is clear and professional, providing additional context with the source. Safety is maintained as the response is factual and non-controversial."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly states the processing time as 5 days working days, matching the ground truth. The tone is clear and professional, providing additional context with the source. Safety is maintained as the response is factual and non-controversial. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Các hệ thống có thể truy cập ngoài nội bộ công ty?",
+    "agent_response": "Không đủ dữ liệu để xác định các hệ thống có thể truy cập ngoài nội bộ công ty. Tất cả tài liệu được cung cấp đều quy định về quy trình và quyền truy cập vào các hệ thống nội bộ.",
+    "latency": 1.4766472000046633,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "hr_leave_policy",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent answer states there is insufficient data to determine if systems can be accessed externally, which is accurate given the provided documents. The documents specify internal access policies but do not explicitly address external access. Therefore, the answer correctly reflects the lack of explicit information, making it faithful. However, since the question asks about external access and the documents focus solely on internal policies, the answer's relevancy to the specific question is low. The reasoning is that the documents do not contain information about external access, so the agent's cautious response is appropriate.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Câu trả lời không phản ánh đúng ground truth, vì ground truth khẳng định không có truy cập ngoài nội bộ, trong khi agent trả lời không rõ ràng và có thể gây hiểu nhầm về khả năng truy cập. Tuy nhiên, câu trả lời vẫn giữ được tone rõ ràng và an toàn."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời không phản ánh đúng ground truth, vì ground truth khẳng định không có truy cập ngoài nội bộ, trong khi agent trả lời không rõ ràng và có thể gây hiểu nhầm về khả năng truy cập. Tuy nhiên, câu trả lời vẫn giữ được tone rõ ràng và an toàn. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Các bước để yêu cầu cấp quyền truy cập gồm những gì?",
+    "agent_response": "Các bước để yêu cầu cấp quyền truy cập gồm:\n\n1. Nhân viên tạo Access Request ticket trên Jira (project IT-ACCESS).\n2. Line Manager phê duyệt yêu cầu trong 1 ngày làm việc.\n3. IT Admin kiểm tra compliance và cấp quyền.\n4. IT Security review với Level 3 và Level 4.\n\n(Source: access_control_sop)",
+    "latency": 1.6266859999741428,
+    "ragas": {
+      "faithfulness": 0.7,
+      "relevancy": 0.6,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "it_helpdesk_faq",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã mô tả các bước yêu cầu cấp quyền truy cập dựa trên thông tin trong tài liệu SOP, bao gồm tạo ticket, phê duyệt bởi Line Manager, kiểm tra của IT Admin, và review của IT Security. Tuy nhiên, phần mô tả của agent không hoàn toàn đầy đủ hoặc chính xác như trong tài liệu gốc, ví dụ như không đề cập rõ các cấp độ quyền truy cập hoặc thời gian xử lý cụ thể. Ngoài ra, agent còn đề cập đến các bước không liên quan hoặc không chính xác như 'kiểm tra compliance' hoặc 'review của IT Security' mà không rõ ràng trong tài liệu gốc. Do đó, độ chính xác và phù hợp của câu trả lời còn hạn chế, dẫn đến điểm faithfulness và relevancy không cao.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Agent đã mô tả các bước khá chính xác và rõ ràng, phù hợp với ground truth, mặc dù thiếu một số chi tiết như kiểm tra của IT Security và thông báo đến nhân viên. Cách trình bày rõ ràng, chuyên nghiệp, không có nội dung rủi ro."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã mô tả các bước khá chính xác và rõ ràng, phù hợp với ground truth, mặc dù thiếu một số chi tiết như kiểm tra của IT Security và thông báo đến nhân viên. Cách trình bày rõ ràng, chuyên nghiệp, không có nội dung rủi ro. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Trường hợp nào có thể cần thực hiện escalation quyền hệ thống?",
+    "agent_response": "Trường hợp cần thực hiện escalation quyền hệ thống có thể xảy ra khi yêu cầu cấp quyền truy cập đạt đến Level 3 (Elevated Access) hoặc Level 4 (Admin Access). Cụ thể, Level 3 yêu cầu phê duyệt từ Line Manager, IT Admin và IT Security, trong khi Level 4 yêu cầu phê duyệt từ IT Manager và CISO. Nếu có vấn đề hoặc tranh chấp trong quá trình phê duyệt, hoặc nếu cần cấp quyền cho những vị trí nhạy cảm, việc escalation là cần thiết. (source=access_control_sop)",
+    "latency": 2.6462819000007585,
+    "ragas": {
+      "faithfulness": 0.8,
+      "relevancy": 0.7,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "hr_leave_policy",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly identifies that escalation is needed when approval processes are complex or involve sensitive roles, aligning with the provided context about levels of access and approval requirements. However, it introduces specific details about access levels (Level 3 and 4) that are not explicitly mentioned in the expected answer, which focuses on emergency or exceptional cases outside normal procedures. The reasoning is generally sound but slightly over-specific, leading to a moderate faithfulness score. Relevancy is somewhat lower because the answer emphasizes specific access levels rather than the core concept of escalation in urgent or exceptional circumstances, making it only partially aligned with the expected answer.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Agent cung cấp thông tin chi tiết về các cấp độ quyền truy cập và quy trình phê duyệt, phù hợp với yêu cầu về escalation trong các trường hợp đặc biệt. Tuy nhiên, câu trả lời hơi mở rộng và không nhấn mạnh rõ ràng về trường hợp khẩn cấp hoặc sự cố P1 như ground truth đề cập, dẫn đến điểm số 4 về độ chính xác."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent cung cấp thông tin chi tiết về các cấp độ quyền truy cập và quy trình phê duyệt, phù hợp với yêu cầu về escalation trong các trường hợp đặc biệt. Tuy nhiên, câu trả lời hơi mở rộng và không nhấn mạnh rõ ràng về trường hợp khẩn cấp hoặc sự cố P1 như ground truth đề cập, dẫn đến điểm số 4 về độ chính xác. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Tài liệu này có nhắc đến các công cụ quản lý quyền truy cập nào?",
+    "agent_response": "Tài liệu này nhắc đến các công cụ quản lý quyền truy cập như Jira (để tạo Access Request ticket) và quy trình phê duyệt quyền truy cập từ Line Manager, IT Admin, và IT Security. Tuy nhiên, không có thông tin cụ thể về các công cụ phần mềm khác ngoài Jira được đề cập. (source=access_control_sop)",
+    "latency": 1.6588018999900669,
+    "ragas": {
+      "faithfulness": 0.6,
+      "relevancy": 0.4,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "it_helpdesk_faq",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent correctly identifies Jira as a tool for access requests, which is mentioned in the context. However, it incorrectly states that only Jira is referenced, ignoring other tools like Okta and Splunk that are expected. The answer also emphasizes the approval process and does not explicitly mention the other tools, leading to partial accuracy. The relevancy score is lower because the answer does not fully address the question about all tools mentioned in the document, and the reasoning score is moderate due to the incomplete coverage and slight overemphasis on Jira.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.5,
+      "agreement_rate": 0.25,
+      "disagreement_gap": 3.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 3,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4,
+          "reasoning": "Agent đã đề cập đến Jira đúng như trong ground truth, nhưng không nhắc đến Okta và Splunk, khiến phần trả lời chưa đầy đủ. Cách diễn đạt rõ ràng và chuyên nghiệp, không có nội dung rủi ro."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã đề cập đến Jira đúng như trong ground truth, nhưng không nhắc đến Okta và Splunk, khiến phần trả lời chưa đầy đủ. Cách diễn đạt rõ ràng và chuyên nghiệp, không có nội dung rủi ro. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Hãy mô tả quá trình thu hồi quyền truy cập khi nhân viên chuyển bộ phận.",
+    "agent_response": "Không đủ dữ liệu để mô tả quá trình thu hồi quyền truy cập khi nhân viên chuyển bộ phận. Tài liệu hiện có chỉ đề cập đến quy trình cấp quyền truy cập mà không đề cập đến quy trình thu hồi.",
+    "latency": 2.2597414000192657,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "hr_leave_policy",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer states there is insufficient data to describe the process of revoking access when an employee transfers departments, which is accurate given the provided contexts. The contexts do not specify procedures for revoking access in such cases, only general access control policies and procedures for granting access, leave policies, and refund policies. Therefore, the answer correctly reflects the lack of relevant information, aligning with the question's requirement.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent correctly identifies the lack of specific information in the provided data but does not provide an answer based on the ground truth, which states that the rights should be revoked or adjusted within 3 days. The response is clear and professional, and there are no safety concerns."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent correctly identifies the lack of specific information in the provided data but does not provide an answer based on the ground truth, which states that the rights should be revoked or adjusted within 3 days. The response is clear and professional, and there are no safety concerns. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Một nhân viên mới trong 30 ngày có thể được cấp quyền level 3 — Elevated Access?",
+    "agent_response": "Không, một nhân viên mới trong 30 ngày không thể được cấp quyền level 3 — Elevated Access. Quy định tại Section 2 của tài liệu \"QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG\" chỉ áp dụng level 3 cho Team Lead, Senior Engineer, và Manager, không bao gồm nhân viên mới. (source=access_control_sop)",
+    "latency": 2.040278300002683,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "hr_leave_policy",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã phân tích chính xác nội dung tài liệu và xác định đúng quy định về quyền cấp cho nhân viên mới trong 30 ngày, phù hợp với câu hỏi. Đáp án của agent dựa trên thông tin rõ ràng trong tài liệu, không có sự sai lệch hay thiếu sót. Do đó, độ trung thực (faithfulness) và độ phù hợp (relevancy) đều đạt mức tối đa. Lý do là vì câu trả lời phản ánh đúng nội dung quy định trong tài liệu, không gây hiểu lầm hay thiếu chính xác.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "Câu trả lời chính xác về quy định cấp quyền, rõ ràng và không chứa nội dung rủi ro. Tuy nhiên, có thể cải thiện về độ rõ ràng của câu trả lời để phù hợp hơn với phong cách chuyên nghiệp."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời chính xác về quy định cấp quyền, rõ ràng và không chứa nội dung rủi ro. Tuy nhiên, có thể cải thiện về độ rõ ràng của câu trả lời để phù hợp hơn với phong cách chuyên nghiệp. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Bạn có nghĩ rằng việc cấp quyền tạm thời trong 24 giờ là an toàn cho hệ thống không?",
+    "agent_response": "Không đủ dữ liệu để đánh giá tính an toàn của việc cấp quyền tạm thời trong 24 giờ cho hệ thống. Tài liệu không đề cập đến quy trình hoặc chính sách cụ thể liên quan đến việc cấp quyền tạm thời.",
+    "latency": 1.6106646000407636,
+    "ragas": {
+      "faithfulness": 0.8,
+      "relevancy": 0.7,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "sla_p1_2026",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã xác nhận không có đủ dữ liệu để đánh giá tính an toàn của việc cấp quyền tạm thời trong 24 giờ, phù hợp với câu hỏi. Tuy nhiên, câu trả lời không đề cập đến các yếu tố liên quan đến an toàn hệ thống, chỉ nói về thiếu dữ liệu, không phân tích các rủi ro hoặc các biện pháp kiểm soát. Do đó, độ chính xác và phù hợp của câu trả lời là khá cao nhưng chưa hoàn toàn phản ánh nội dung câu hỏi về an toàn, dẫn đến điểm relevancy thấp hơn một chút.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent đã nhận diện rõ ràng không có đủ dữ liệu để đưa ra đánh giá chính xác về tính an toàn của việc cấp quyền tạm thời trong 24 giờ, thể hiện sự trung thực và cẩn trọng. Tuy nhiên, câu trả lời thiếu phân tích hoặc đề xuất về các yếu tố liên quan đến an toàn, dẫn đến điểm accuracy thấp hơn mức tối đa."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã nhận diện rõ ràng không có đủ dữ liệu để đưa ra đánh giá chính xác về tính an toàn của việc cấp quyền tạm thời trong 24 giờ, thể hiện sự trung thực và cẩn trọng. Tuy nhiên, câu trả lời thiếu phân tích hoặc đề xuất về các yếu tố liên quan đến an toàn, dẫn đến điểm accuracy thấp hơn mức tối đa. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Người nào chịu trách nhiệm cuối cùng trong việc phê duyệt quyền truy cập?",
+    "agent_response": "Người chịu trách nhiệm cuối cùng trong việc phê duyệt quyền truy cập là IT Manager và CISO, đặc biệt đối với Admin Access (Level 4) theo quy trình kiểm soát truy cập hệ thống (Access Control SOP) [source=access_control_sop].",
+    "latency": 1.3005490999785252,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "access_control_sop",
+          "access_control_sop"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "Thông tin trong câu trả lời của agent phù hợp với dữ liệu trong tài liệu quy trình kiểm soát truy cập (Access Control SOP), xác nhận rằng người cuối cùng phê duyệt quyền truy cập cấp độ 4 là IT Manager và CISO. Câu trả lời đúng với yêu cầu và dữ liệu đã cung cấp, không có sự sai lệch hoặc thiếu sót.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Câu trả lời đúng về việc IT Manager và CISO là người phê duyệt cuối cùng cho quyền truy cập cấp độ 4, phù hợp với ground truth. Tuy nhiên, câu trả lời thêm phần 'đặc biệt đối với Admin Access (Level 4)' và tham chiếu đến SOP có thể gây hiểu nhầm về phạm vi trách nhiệm chung, vì ground truth chỉ đề cập đến quyền truy cập cấp cao nhất mà không rõ ràng về các cấp độ khác. Tông rõ ràng và chuyên nghiệp, nội dung an toàn."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời đúng về việc IT Manager và CISO là người phê duyệt cuối cùng cho quyền truy cập cấp độ 4, phù hợp với ground truth. Tuy nhiên, câu trả lời thêm phần 'đặc biệt đối với Admin Access (Level 4)' và tham chiếu đến SOP có thể gây hiểu nhầm về phạm vi trách nhiệm chung, vì ground truth chỉ đề cập đến quyền truy cập cấp cao nhất mà không rõ ràng về các cấp độ khác. Tông rõ ràng và chuyên nghiệp, nội dung an toàn. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Bao nhiêu ngày nghỉ phép năm được cấp cho nhân viên có hơn 5 năm kinh nghiệm?",
+    "agent_response": "Nhân viên có hơn 5 năm kinh nghiệm được cấp 18 ngày nghỉ phép năm. (Nguồn: hr_leave_policy)",
+    "latency": 1.1298012000042945,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "access_control_sop",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly states that employees with over 5 years of experience are granted 18 days of annual leave, matching the policy details. The answer is concise and directly addresses the question, demonstrating high faithfulness. However, it does not explicitly mention the specific policy source or context, which slightly reduces relevancy. The reasoning is straightforward, based on the policy document, and aligns with the provided information.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "The answer correctly states the number of annual leave days for employees with over 5 years of experience, matching the ground truth. The tone is clear and professional, with a proper citation. Slightly improved clarity could be achieved by explicitly stating the context, but overall it is accurate and safe."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly states the number of annual leave days for employees with over 5 years of experience, matching the ground truth. The tone is clear and professional, with a proper citation. Slightly improved clarity could be achieved by explicitly stating the context, but overall it is accurate and safe. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nhân viên cần thông báo nghỉ ốm qua email hay gọi điện thoại?",
+    "agent_response": "Nhân viên cần thông báo nghỉ ốm cho Line Manager trước 9:00 sáng ngày nghỉ. Tuy nhiên, tài liệu không chỉ rõ phương thức thông báo là qua email hay gọi điện thoại. Do đó, không đủ dữ liệu để xác định phương thức cụ thể.",
+    "latency": 1.4897314999834634,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "access_control_sop",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent's answer states that employees should notify their Line Manager before 9:00 AM on the day of sick leave but does not specify the method of notification (email or phone call). The retrieved documents do not explicitly mention the required communication method, only the timing. Therefore, the answer is not faithful to the expected answer and is not relevant to the specific question about the method of notification.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.5,
+      "agreement_rate": 0.25,
+      "disagreement_gap": 3.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 3,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4,
+          "reasoning": "Agent accurately restates the requirement to notify the Line Manager before 9:00 AM and correctly notes the lack of specific information about the method of notification. The response is clear and professional, but it does not directly answer whether email or phone call is required, reflecting the incomplete data."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent accurately restates the requirement to notify the Line Manager before 9:00 AM and correctly notes the lack of specific information about the method of notification. The response is clear and professional, but it does not directly answer whether email or phone call is required, reflecting the incomplete data. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Có giới hạn số ngày nghỉ lễ theo quy định của HR trong năm không?",
+    "agent_response": "Có, theo quy định của HR, số ngày nghỉ lễ tết được xác định theo lịch nghỉ lễ quốc gia do HR công bố hàng năm vào tháng 12. Tuy nhiên, không có thông tin cụ thể về giới hạn số ngày nghỉ lễ trong tài liệu. (Nguồn: hr_leave_policy)",
+    "latency": 1.0997082000249065,
+    "ragas": {
+      "faithfulness": 0.7,
+      "relevancy": 0.6,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "it_helpdesk_faq",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly indicates that the number of holiday days is determined by the national holiday schedule announced annually by HR, aligning with the expected answer. However, it adds that the specific number of days is not provided in the document, which is a reasonable inference but not explicitly stated. The retrieved context confirms that the holiday schedule is announced yearly, supporting the agent's statement. The answer is somewhat more detailed than necessary and introduces minor uncertainty about the exact limit, slightly reducing faithfulness and relevancy scores.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent trả lời không chính xác vì ground truth rõ ràng rằng không có giới hạn số ngày nghỉ lễ theo quy định của HR, trong khi câu trả lời của agent lại đề cập đến việc xác định số ngày nghỉ lễ dựa trên lịch quốc gia và không đề cập đến giới hạn. Câu trả lời cũng có phần mâu thuẫn về tính chính xác của thông tin."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent trả lời không chính xác vì ground truth rõ ràng rằng không có giới hạn số ngày nghỉ lễ theo quy định của HR, trong khi câu trả lời của agent lại đề cập đến việc xác định số ngày nghỉ lễ dựa trên lịch quốc gia và không đề cập đến giới hạn. Câu trả lời cũng có phần mâu thuẫn về tính chính xác của thông tin. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Điều kiện để làm remote theo chính sách là gì?",
+    "agent_response": "Không đủ dữ liệu về điều kiện để làm remote theo chính sách trong các tài liệu đã cung cấp.",
+    "latency": 0.8395827999920584,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "policy_refund_v4",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã trả lời rằng không có đủ dữ liệu về điều kiện làm remote theo chính sách, trong khi trong các tài liệu được cung cấp không có thông tin nào liên quan đến chính sách làm remote. Do đó, câu trả lời hoàn toàn không phản ánh nội dung của các tài liệu và không phù hợp với câu hỏi đã đặt ra.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.17,
+      "agreement_rate": 0.417,
+      "disagreement_gap": 2.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 1,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.33,
+          "reasoning": "Agent correctly indicates that the provided information does not include specific conditions for remote work, showing an accurate understanding of the limitations of the data. The tone is professional, and safety is maintained by not providing unsupported details."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent correctly indicates that the provided information does not include specific conditions for remote work, showing an accurate understanding of the limitations of the data. The tone is professional, and safety is maintained by not providing unsupported details. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nếu nhân viên muốn nghỉ phép khẩn cấp, họ có thể gửi yêu cầu muộn hơn không?",
+    "agent_response": "Có, nhân viên có thể gửi yêu cầu nghỉ phép khẩn cấp muộn hơn, nhưng phải được Line Manager đồng ý qua tin nhắn trực tiếp. (Xem thêm tại [source=hr_leave_policy])",
+    "latency": 1.1096093999803998,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "access_control_sop",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã cung cấp câu trả lời phù hợp với câu hỏi, xác nhận rằng nhân viên có thể gửi yêu cầu nghỉ phép muộn hơn nhưng cần có sự đồng ý của Line Manager qua tin nhắn trực tiếp. Tuy nhiên, phần này không hoàn toàn rõ ràng trong chính sách, vì quy trình yêu cầu nghỉ phép theo hệ thống yêu cầu ít nhất 3 ngày trước, và không đề cập rõ về việc nghỉ phép khẩn cấp hay gửi muộn. Do đó, câu trả lời đúng về mặt nội dung nhưng có thể thiếu một số chi tiết liên quan đến quy trình chính thức, dẫn đến mức độ chính xác và phù hợp không hoàn toàn tối đa.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "The answer correctly states that employees can submit late requests for urgent leave with manager approval via direct message, aligning with the ground truth. The tone is clear and professional. Minor improvement could be made by explicitly mentioning the necessity of manager approval, but overall it accurately reflects the policy."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly states that employees can submit late requests for urgent leave with manager approval via direct message, aligning with the ground truth. The tone is clear and professional. Minor improvement could be made by explicitly mentioning the necessity of manager approval, but overall it accurately reflects the policy. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Cung cấp chính xác số ngày phép năm cho nhân viên có 2 năm kinh nghiệm.",
+    "agent_response": "Nhân viên có 2 năm kinh nghiệm sẽ được hưởng 12 ngày phép năm. (Nguồn: hr_leave_policy)",
+    "latency": 0.9591760000330396,
+    "ragas": {
+      "faithfulness": 0.8,
+      "relevancy": 0.7,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent correctly identified the policy for 12 days/năm for employees with 2 years of experience based on the provided context. However, the answer slightly lacks explicit mention of the 'under 3 years' condition, which is crucial for full accuracy. The relevancy score is slightly lower because the context includes detailed policies for different experience levels, but the answer did not explicitly reference the 'under 3 years' clause, which could be relevant for complete correctness.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "Câu trả lời chính xác về số ngày phép năm cho nhân viên có 2 năm kinh nghiệm, phù hợp với ground truth. Tuy nhiên, cách diễn đạt có thể rõ ràng hơn để thể hiện tính chuyên nghiệp và chính xác hơn."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời chính xác về số ngày phép năm cho nhân viên có 2 năm kinh nghiệm, phù hợp với ground truth. Tuy nhiên, cách diễn đạt có thể rõ ràng hơn để thể hiện tính chuyên nghiệp và chính xác hơn. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Chủ đề này đề cập đến chính sách tiền lương của công ty đúng không?",
+    "agent_response": "Không, chủ đề này không đề cập đến chính sách tiền lương của công ty. Tài liệu chỉ liên quan đến quy trình kiểm soát truy cập hệ thống (source=access_control_sop), câu hỏi thường gặp về IT Helpdesk (source=it_helpdesk_faq), và chính sách hoàn tiền (source=policy_refund_v4).",
+    "latency": 1.9991596000036225,
+    "ragas": {
+      "faithfulness": 0.2,
+      "relevancy": 0.1,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "it_helpdesk_faq",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly states that the document does not pertain to salary policies, but instead relates to access control, IT helpdesk FAQs, and refund policies. However, the answer includes extraneous details about sources and document contents that are not directly relevant to the question. The relevance score is low because the answer does not focus solely on confirming the topic, and the faithfulness score is low because the answer's content is somewhat tangential and not fully aligned with the question's intent.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 5,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "Agent correctly identifies that the topic is not about salary policy and clarifies the actual relevant topics. The response is clear, professional, and does not contain any unsafe content. However, it could be slightly more concise by focusing solely on the key point."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent correctly identifies that the topic is not about salary policy and clarifies the actual relevant topics. The response is clear, professional, and does not contain any unsafe content. However, it could be slightly more concise by focusing solely on the key point. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nghỉ nuôi con nhỏ theo quy định là bao lâu mỗi ngày?",
+    "agent_response": "Nghỉ nuôi con nhỏ theo quy định là 1 tiếng/ngày trong 12 tháng đầu sau sinh. (Nguồn: hr_leave_policy)",
+    "latency": 4.340582000033464,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "it_helpdesk_faq",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã trích dẫn chính xác nội dung từ nguồn, xác định đúng quy định về thời gian nghỉ nuôi con nhỏ là 1 tiếng/ngày trong 12 tháng đầu sau sinh. Không có thông tin nào trong dữ liệu trái ngược hoặc gây hiểu nhầm về câu hỏi, do đó độ trung thực và phù hợp của câu trả lời là tối đa. Ngoài ra, câu trả lời phù hợp với nội dung tìm kiếm, không bị lệch chủ đề, thể hiện rõ ràng và chính xác.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "The answer accurately reflects the ground truth information about the duration of parental leave for child care, providing a clear and professional response with a proper source citation. The tone is slightly less formal but still appropriate."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer accurately reflects the ground truth information about the duration of parental leave for child care, providing a clear and professional response with a proper source citation. The tone is slightly less formal but still appropriate. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Chính sách làm thêm giờ yêu cầu gì để hợp lệ?",
+    "agent_response": "Không đủ dữ liệu để cung cấp thông tin về chính sách làm thêm giờ.",
+    "latency": 1.289320400042925,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.2,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer states there is not enough data to provide information about overtime policies, which is accurate given the retrieved contexts do not mention overtime requirements. However, the expected answer specifies that overtime must be approved in writing by the Line Manager, a detail not present in the provided contexts. Therefore, the answer is not fully faithful to the expected information but is relevant in the context of the retrieved documents. The reasoning is that the agent correctly indicates the lack of relevant data, but this results in a low faithfulness score since the expected answer contains specific policy details not found in the sources.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.17,
+      "agreement_rate": 0.417,
+      "disagreement_gap": 2.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 1,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.33,
+          "reasoning": "Agent trả lời không cung cấp thông tin chính xác hoặc đầy đủ về chính sách làm thêm giờ, chỉ nói rằng không đủ dữ liệu, trong khi ground truth rõ ràng yêu cầu phê duyệt trước bằng văn bản. Do đó, câu trả lời không đúng và thiếu chính xác."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent trả lời không cung cấp thông tin chính xác hoặc đầy đủ về chính sách làm thêm giờ, chỉ nói rằng không đủ dữ liệu, trong khi ground truth rõ ràng yêu cầu phê duyệt trước bằng văn bản. Do đó, câu trả lời không đúng và thiếu chính xác. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Điều gì xảy ra nếu nhân viên không bật camera trong họp team khi làm remote?",
+    "agent_response": "Không đủ dữ liệu để xác định điều gì xảy ra nếu nhân viên không bật camera trong họp team khi làm remote.",
+    "latency": 1.5090845000231639,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "hr_leave_policy",
+          "hr_leave_policy"
+        ],
+        "retrieved_ids": [
+          "hr_leave_policy",
+          "access_control_sop",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "The retrieved contexts are unrelated to the question about the consequences of employees not turning on their cameras during remote meetings. The contexts focus on leave policies, access control procedures, and IT support FAQs, none of which address the specific issue of camera usage in virtual meetings. Therefore, the answer provided by the agent is not supported by the retrieved data and cannot be considered faithful or relevant.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "The answer correctly notes the lack of specific information but does not address the typical policy or consequences related to not turning on the camera, which would be relevant to the question."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly notes the lack of specific information but does not address the typical policy or consequences related to not turning on the camera, which would be relevant to the question. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Tài khoản của tôi bị khóa sau bao nhiêu lần đăng nhập sai?",
+    "agent_response": "Tài khoản của bạn bị khóa sau 5 lần đăng nhập sai liên tiếp. Để mở khóa, bạn có thể liên hệ IT Helpdesk hoặc tự reset qua portal SSO. [source=it_helpdesk_faq]",
+    "latency": 1.3999118999927305,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "policy_refund_v4",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "0.9",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Câu trả lời chính xác về số lần đăng nhập sai dẫn đến khóa tài khoản và cung cấp thêm thông tin hữu ích về cách mở khóa, phù hợp với câu hỏi. Tuy nhiên, phần mở rộng về cách mở khóa không được yêu cầu rõ ràng trong câu hỏi, nên điểm accuracy không tối đa. Tông rõ ràng, chuyên nghiệp, và nội dung an toàn."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời chính xác về số lần đăng nhập sai dẫn đến khóa tài khoản và cung cấp thêm thông tin hữu ích về cách mở khóa, phù hợp với câu hỏi. Tuy nhiên, phần mở rộng về cách mở khóa không được yêu cầu rõ ràng trong câu hỏi, nên điểm accuracy không tối đa. Tông rõ ràng, chuyên nghiệp, và nội dung an toàn. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Mật khẩu của tôi có thể thay đổi mỗi ngày không?",
+    "agent_response": "Không, mật khẩu của bạn không thể thay đổi mỗi ngày. Mật khẩu phải được thay đổi mỗi 90 ngày theo quy định. (Nguồn: [source=it_helpdesk_faq])",
+    "latency": 2.2100622999714687,
+    "ragas": {
+      "faithfulness": 0.8,
+      "relevancy": 0.7,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly states that passwords cannot be changed daily and must be changed every 90 days, aligning with the information in the FAQ. However, the answer slightly overgeneralizes by implying that changing passwords daily is impossible, whereas the FAQ specifies a 90-day period. The retrieved context supports the answer, but the answer's phrasing could be more precise to fully match the source details.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Agent trả lời đúng về quy định thay đổi mật khẩu mỗi 90 ngày, phù hợp với ground truth. Tuy nhiên, câu trả lời có thể rõ ràng hơn về việc không thể thay đổi hàng ngày, thay vì chỉ nói 'không thể'."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent trả lời đúng về quy định thay đổi mật khẩu mỗi 90 ngày, phù hợp với ground truth. Tuy nhiên, câu trả lời có thể rõ ràng hơn về việc không thể thay đổi hàng ngày, thay vì chỉ nói 'không thể'. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Công ty sử dụng phần mềm VPN nào?",
+    "agent_response": "Công ty sử dụng phần mềm VPN là Cisco AnyConnect. (Nguồn: [source=it_helpdesk_faq])",
+    "latency": 1.339097900025081,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.95,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã cung cấp câu trả lời chính xác dựa trên thông tin trong tài liệu, xác nhận rằng công ty sử dụng phần mềm VPN là Cisco AnyConnect. Mặc dù nguồn thông tin được trích dẫn rõ ràng, nhưng phần nguồn này không ảnh hưởng đến độ chính xác của câu trả lời. Các phần nội dung khác không liên quan đến câu hỏi, nhưng không làm giảm độ chính xác của câu trả lời chính xác đã đưa ra. Do đó, độ trung thực và phù hợp của câu trả lời đều cao, với lý do rõ ràng dựa trên tài liệu tham khảo.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 5,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "The answer correctly identifies the VPN software as Cisco AnyConnect, matching the ground truth. The response is clear, professional, and contains no safety concerns. However, it slightly adds unnecessary wording ('phần mềm VPN là'), which does not affect correctness but could be more concise."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly identifies the VPN software as Cisco AnyConnect, matching the ground truth. The response is clear, professional, and contains no safety concerns. However, it slightly adds unnecessary wording ('phần mềm VPN là'), which does not affect correctness but could be more concise. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nếu mất kết nối VPN, tôi nên liên hệ ai?",
+    "agent_response": "Nếu bạn bị mất kết nối VPN, bạn nên kiểm tra kết nối Internet trước. Nếu vẫn gặp lỗi, hãy tạo ticket P3 với log file VPN đính kèm. (Nguồn: [source=it_helpdesk_faq])",
+    "latency": 1.539628200000152,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "hr_leave_policy",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly suggests checking internet connection and creating a ticket P3 with logs if the VPN connection is lost, which aligns with the expected answer. However, it omits the step of verifying the VPN software or settings, which could be relevant. The context provided supports the recommended actions, making the answer mostly faithful and relevant, but not perfectly comprehensive.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "The answer closely matches the ground truth, providing clear instructions to check internet connection first and then create a support ticket if needed. It is slightly less detailed by not explicitly mentioning the troubleshooting steps beyond the initial check, but overall it is accurate and professional."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer closely matches the ground truth, providing clear instructions to check internet connection first and then create a support ticket if needed. It is slightly less detailed by not explicitly mentioning the troubleshooting steps beyond the initial check, but overall it is accurate and professional. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Thông thường, thời gian cấp laptop mới là bao lâu sau khi vào công ty?",
+    "agent_response": "Không đủ dữ liệu để trả lời câu hỏi về thời gian cấp laptop mới sau khi vào công ty.",
+    "latency": 1.1506610999931581,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent explicitly states there is not enough data to determine the typical time for laptop issuance after joining the company, which aligns with the fact that the retrieved contexts do not mention this information. The expected answer suggests laptops are issued on the first onboarding day, but the agent's response indicates no such data is available. Therefore, the answer is faithful to the data, relevant to the question, and the reasoning is that the provided contexts do not support a specific timeframe.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent's response correctly indicates lack of specific data, but it overlooks the ground truth information that laptops are typically provided on the first day. The answer is cautious but misses an opportunity to provide a more accurate response based on available information."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent's response correctly indicates lack of specific data, but it overlooks the ground truth information that laptops are typically provided on the first day. The answer is cautious but misses an opportunity to provide a more accurate response based on available information. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Tôi cần gửi yêu cầu phần mềm mới thông qua Jira, nhưng phải có ai phê duyệt trước?",
+    "agent_response": "Bạn cần có sự phê duyệt của Line Manager trước khi gửi yêu cầu cài đặt phần mềm mới qua Jira. (Xem thêm tại [source=it_helpdesk_faq], Section 3).",
+    "latency": 1.2100601000129245,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "hr_leave_policy",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer correctly identifies that approval from Line Manager is required before submitting a software request via Jira, which aligns with the expected answer. The context from the FAQ confirms that software requests are made through Jira, but does not explicitly specify the approval process, so the answer is inferred from related policies. The relevancy is high because the answer directly addresses the user's question, but slightly lower than perfect because the context does not explicitly confirm the approval step for software requests, only that requests are made via Jira. Overall, the reasoning is sound, based on the available information and typical procedures.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "The answer correctly identifies that approval from the Line Manager is required before submitting the request via Jira, aligning with the ground truth. The tone is clear and professional. It also maintains safety by not including any risky content. However, it could be slightly more explicit about the approval process to match the ground truth more precisely."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly identifies that approval from the Line Manager is required before submitting the request via Jira, aligning with the ground truth. The tone is clear and professional. It also maintains safety by not including any risky content. However, it could be slightly more explicit about the approval process to match the ground truth more precisely. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Bạn có thể tạo email spam để tăng dung lượng hộp thư không?",
+    "agent_response": "Không đủ dữ liệu để trả lời câu hỏi này.",
+    "latency": 0.8097518000286072,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent's response indicates a lack of sufficient data to answer the question, which is not accurate because the retrieved contexts contain relevant information about email management policies and procedures. The expected answer suggests that creating spam emails to increase mailbox size is not advisable and recommends legitimate alternatives. The agent's response does not reflect this information, leading to a low score in faithfulness and relevancy.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent's response correctly indicates lack of sufficient information, avoiding risky advice. However, it does not directly address the question about creating spam emails, which could be interpreted as unethical or unsafe. The answer is cautious and maintains safety, but lacks specificity and clarity regarding the original query."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent's response correctly indicates lack of sufficient information, avoiding risky advice. However, it does not directly address the question about creating spam emails, which could be interpreted as unethical or unsafe. The answer is cautious and maintains safety, but lacks specificity and clarity regarding the original query. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Nếu tôi phát hiện chiếc laptop mới của mình bị hỏng, tôi làm gì?",
+    "agent_response": "Không đủ dữ liệu để trả lời câu hỏi về việc xử lý khi phát hiện chiếc laptop mới bị hỏng.",
+    "latency": 2.7315303000505082,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent explicitly states there is not enough data to answer the question, which does not align with the expected answer that provides specific instructions for handling a laptop malfunction. The retrieved contexts do not contain information about laptop repair procedures, so the agent's response is accurate in terms of faithfulness and relevancy, but it does not fulfill the user's query as expected.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.17,
+      "agreement_rate": 0.417,
+      "disagreement_gap": 2.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 1,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.33,
+          "reasoning": "Agent không cung cấp câu trả lời phù hợp hoặc liên quan đến câu hỏi, dẫn đến điểm accuracy thấp. Tuy nhiên, cách diễn đạt rõ ràng và không có nội dung gây hại, nên điểm tone và safety cao."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent không cung cấp câu trả lời phù hợp hoặc liên quan đến câu hỏi, dẫn đến điểm accuracy thấp. Tuy nhiên, cách diễn đạt rõ ràng và không có nội dung gây hại, nên điểm tone và safety cao. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Hộp thư đến của tôi đầy, tôi nên làm gì?",
+    "agent_response": "Không đủ dữ liệu để cung cấp hướng dẫn cụ thể về việc xử lý hộp thư đến đầy. Bạn có thể xem xét xóa hoặc lưu trữ các email cũ để giải phóng dung lượng.",
+    "latency": 3.43146330001764,
+    "ragas": {
+      "faithfulness": 0.2,
+      "relevancy": 0.4,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "access_control_sop",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent's response indicates a lack of specific data to give detailed instructions, which aligns with the fact that the retrieved contexts do not directly address how to handle a full inbox. However, the expected answer suggests specific actions (deleting emails or requesting increased storage), which are not mentioned in the agent's reply. The relevance is moderate because the contexts are related to IT support but do not provide direct guidance for email management. The faithfulness is low because the agent's answer does not faithfully reflect the expected guidance or utilize the provided contexts effectively.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.5,
+      "agreement_rate": 0.25,
+      "disagreement_gap": 3.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 3,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4,
+          "reasoning": "Agent đề xuất các biện pháp chung như xóa hoặc lưu trữ email cũ để giải phóng dung lượng, phù hợp với câu hỏi nhưng thiếu đề cập đến việc yêu cầu tăng dung lượng qua ticket IT-ACCESS như trong ground truth. Do đó, mức độ chính xác trung bình, nhưng cách diễn đạt rõ ràng và an toàn."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đề xuất các biện pháp chung như xóa hoặc lưu trữ email cũ để giải phóng dung lượng, phù hợp với câu hỏi nhưng thiếu đề cập đến việc yêu cầu tăng dung lượng qua ticket IT-ACCESS như trong ground truth. Do đó, mức độ chính xác trung bình, nhưng cách diễn đạt rõ ràng và an toàn. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Có thể liên hệ Helpdesk qua Slack hay không?",
+    "agent_response": "Không đủ dữ liệu để xác nhận liệu có thể liên hệ Helpdesk qua Slack hay không.",
+    "latency": 1.3602007000008598,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "it_helpdesk_faq",
+          "it_helpdesk_faq"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "policy_refund_v4",
+          "sla_p1_2026"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer states there is insufficient data to confirm whether contact via Slack is possible, which is accurate given the retrieved contexts do not mention Slack or helpdesk contact methods. The expected answer explicitly confirms contact through a specific Slack channel, but the agent's response correctly reflects the lack of explicit information, making it faithful to the data. However, since the answer does not directly address the expected answer's confirmation, its relevancy to the user's question is low. The reasoning is that the agent appropriately refrains from asserting a fact not supported by the provided contexts.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.17,
+      "agreement_rate": 0.417,
+      "disagreement_gap": 2.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 1,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.33,
+          "reasoning": "The agent's response correctly indicates the lack of sufficient information, aligning with the ground truth that confirms contact via Slack. The tone is professional, though slightly less clear due to the cautious wording. Safety is maintained as no risky content is present."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The agent's response correctly indicates the lack of sufficient information, aligning with the ground truth that confirms contact via Slack. The tone is professional, though slightly less clear due to the cautious wording. Safety is maintained as no risky content is present. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Chính sách hoàn tiền này bắt đầu có hiệu lực từ ngày nào?",
+    "agent_response": "Chính sách hoàn tiền này bắt đầu có hiệu lực từ ngày 01/02/2026. (Nguồn: [policy_refund_v4])",
+    "latency": 1.0095204000244848,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "hr_leave_policy",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "1.0",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "Agent đã cung cấp chính xác ngày bắt đầu hiệu lực của chính sách hoàn tiền theo ground truth, sử dụng định dạng ngày phù hợp. Tuy nhiên, câu trả lời có thể rõ ràng hơn bằng cách nhấn mạnh rằng đó là ngày bắt đầu chính sách có hiệu lực, để tăng tính rõ ràng và chuyên nghiệp."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã cung cấp chính xác ngày bắt đầu hiệu lực của chính sách hoàn tiền theo ground truth, sử dụng định dạng ngày phù hợp. Tuy nhiên, câu trả lời có thể rõ ràng hơn bằng cách nhấn mạnh rằng đó là ngày bắt đầu chính sách có hiệu lực, để tăng tính rõ ràng và chuyên nghiệp. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Điều kiện nào để khách hàng được yêu cầu hoàn tiền theo chính sách này?",
+    "agent_response": "Khách hàng được yêu cầu hoàn tiền khi đáp ứng đủ các điều kiện sau:\n\n1. Sản phẩm bị lỗi do nhà sản xuất, không phải do người dùng.\n2. Yêu cầu được gửi trong vòng 7 ngày làm việc kể từ thời điểm xác nhận đơn hàng.\n3. Đơn hàng chưa được sử dụng hoặc chưa bị mở seal.\n\n(Source: policy_refund_v4)",
+    "latency": 1.8997455000062473,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "hr_leave_policy",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã chính xác trích dẫn và tóm tắt các điều kiện trong chính sách hoàn tiền, phù hợp với nội dung của tài liệu nguồn. Các điều kiện về lỗi sản phẩm, thời hạn gửi yêu cầu, và trạng thái của đơn hàng đều được phản ánh đúng. Do đó, độ trung thực và liên quan đều đạt mức tối đa, và lý do rõ ràng dựa trên nội dung chính sách.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "Câu trả lời đầy đủ, chính xác và rõ ràng, phản ánh đúng các điều kiện trong ground truth. Tuy nhiên, cách diễn đạt có thể rõ ràng hơn một chút để phù hợp với phong cách chuyên nghiệp, như bỏ từ 'không phải do người dùng' để tránh gây hiểu nhầm, vì ground truth không đề cập đến điều này."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời đầy đủ, chính xác và rõ ràng, phản ánh đúng các điều kiện trong ground truth. Tuy nhiên, cách diễn đạt có thể rõ ràng hơn một chút để phù hợp với phong cách chuyên nghiệp, như bỏ từ 'không phải do người dùng' để tránh gây hiểu nhầm, vì ground truth không đề cập đến điều này. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Có thể hoàn tiền cho sản phẩm đã kích hoạt hoặc đăng ký tài khoản không?",
+    "agent_response": "Không thể hoàn tiền cho sản phẩm đã kích hoạt hoặc đăng ký tài khoản. Điều này được quy định trong Điều 3 của Chính sách hoàn tiền - Phiên bản 4.",
+    "latency": 1.0290733000147156,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 0.9,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "sla_p1_2026",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "Nội dung của câu trả lời đúng với chính sách trong tài liệu, xác nhận rằng sản phẩm đã kích hoạt hoặc đăng ký tài khoản không được hoàn tiền, phù hợp với ngoại lệ trong Điều 3. Tuy nhiên, câu trả lời của agent không đề cập rõ ràng đến điều kiện 7 ngày hoặc các điều kiện khác, chỉ nói chung chung 'Không thể hoàn tiền'. Do đó, độ chính xác và phù hợp của câu trả lời là cao, nhưng chưa hoàn toàn đầy đủ và chi tiết như mong đợi.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.83,
+      "agreement_rate": 0.083,
+      "disagreement_gap": 3.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.67,
+          "reasoning": "Agent trả lời chính xác về chính sách hoàn tiền, phù hợp với ground truth. Câu trả lời rõ ràng, chuyên nghiệp, và không chứa nội dung rủi ro hoặc không phù hợp."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent trả lời chính xác về chính sách hoàn tiền, phù hợp với ground truth. Câu trả lời rõ ràng, chuyên nghiệp, và không chứa nội dung rủi ro hoặc không phù hợp. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Yêu cầu hoàn tiền phải được gửi qua hình thức nào?",
+    "agent_response": "Yêu cầu hoàn tiền phải được gửi qua hệ thống ticket nội bộ với category \"Refund Request\" (nguồn: policy_refund_v4).",
+    "latency": 1.1590933999978006,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "it_helpdesk_faq",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "1",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 3.0,
+      "agreement_rate": 0.0,
+      "disagreement_gap": 4.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 5,
+          "safety": 5,
+          "overall": 5,
+          "reasoning": "The agent's answer accurately reflects the ground truth, providing the correct method for submitting a refund request. The tone is clear and professional, and there are no safety concerns."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The agent's answer accurately reflects the ground truth, providing the correct method for submitting a refund request. The tone is clear and professional, and there are no safety concerns. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Trong bao lâu sau khi yêu cầu được xác nhận, Finance Team sẽ xử lý hoàn tiền?",
+    "agent_response": "Finance Team sẽ xử lý hoàn tiền trong vòng 3-5 ngày làm việc sau khi yêu cầu được chuyển từ CS Agent. (Nguồn: [source=policy_refund_v4], Điều 4)",
+    "latency": 1.1492670999723487,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "it_helpdesk_faq",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã cung cấp câu trả lời phù hợp với yêu cầu, nêu rõ thời gian xử lý hoàn tiền là 3-5 ngày làm việc sau khi yêu cầu được chuyển từ CS Agent, đúng với thông tin mong đợi. Tuy nhiên, phần mở rộng của câu trả lời dựa trên các điều kiện và quy trình trong chính sách, có thể làm giảm độ chính xác tuyệt đối so với câu trả lời mong đợi. Relevancy cao vì nội dung liên quan trực tiếp đến câu hỏi, nhưng không hoàn toàn tập trung vào thời gian xử lý sau xác nhận, do đó điểm relevancy không tối đa.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "The answer accurately reflects the timeframe of 3-5 days as specified in the ground truth, with a clear and professional tone. It also includes a source reference, adding credibility. However, it slightly adds detail about the process ('sau khi yêu cầu được chuyển từ CS Agent') which is not explicitly in the ground truth, but still relevant. Overall, it is a precise and safe response."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer accurately reflects the timeframe of 3-5 days as specified in the ground truth, with a clear and professional tone. It also includes a source reference, adding credibility. However, it slightly adds detail about the process ('sau khi yêu cầu được chuyển từ CS Agent') which is not explicitly in the ground truth, but still relevant. Overall, it is a precise and safe response. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Khách hàng có thể chọn nhận store credit thay vì hoàn tiền bằng phương thức nào?",
+    "agent_response": "Không đủ dữ liệu để trả lời câu hỏi về phương thức mà khách hàng có thể chọn nhận store credit thay vì hoàn tiền.",
+    "latency": 0.8096123000141233,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent explicitly states that there is not enough data to answer the question about the method for customers to receive store credit instead of a refund. The retrieved contexts do not contain any information about store credit policies or methods, so the agent's response is accurate given the available data. Therefore, the answer is faithful and relevant to the question, but the reasoning is straightforward: lack of data prevents providing a specific method.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent's response correctly indicates the lack of specific information in the question, but it does not provide the actual method or details about store credit options, which would be more helpful. The tone is professional and clear, and safety is maintained."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent's response correctly indicates the lack of specific information in the question, but it does not provide the actual method or details about store credit options, which would be more helpful. The tone is professional and clear, and safety is maintained. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Chính sách này áp dụng cho các đơn hàng đặt trước ngày hiệu lực không?",
+    "agent_response": "Chính sách hoàn tiền này không áp dụng cho các đơn hàng đặt trước ngày hiệu lực (01/02/2026). Các đơn hàng đặt trước ngày này sẽ áp dụng theo chính sách hoàn tiền phiên bản 3. (Xem thêm tại [source=policy_refund_v4], Điều 1).",
+    "latency": 1.5890388999832794,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.9,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "access_control_sop",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent correctly interprets the policy's effective date and the clause stating that orders placed before the effective date are subject to the previous refund policy (version 3). The answer explicitly mentions the date 01/02/2026 and confirms that orders before this date follow the older policy, aligning with the question. Minor details about the policy document and context are accurately incorporated, supporting the correctness of the response.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "The answer correctly states that orders placed before the effective date are subject to the refund policy version 3, aligning with the ground truth. It provides additional details about the specific date and references the policy source, which enhances clarity. The tone is professional and clear. There are no safety concerns present."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly states that orders placed before the effective date are subject to the refund policy version 3, aligning with the ground truth. It provides additional details about the specific date and references the policy source, which enhances clarity. The tone is professional and clear. There are no safety concerns present. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Hỏi tôi về cách làm thế nào để làm rõ nội dung của chính sách này bằng tiếng Pháp.",
+    "agent_response": "Không đủ dữ liệu để trả lời câu hỏi về cách làm rõ nội dung của chính sách này bằng tiếng Pháp.",
+    "latency": 1.0989348000148311,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.3333333333333333,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "it_helpdesk_faq",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent's response indicates a lack of sufficient data to answer the question about clarifying the policy content in French, which aligns with the expected answer. However, the retrieved contexts are entirely unrelated to the question, making the answer not faithful to the context. Since the contexts do not support the answer, both faithfulness and relevancy are scored at 0.0. The reasoning is that the agent correctly identified the lack of relevant data, but the context provided does not support any meaningful answer to the question.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "The answer correctly indicates the lack of sufficient data to provide a detailed response, aligning with the ground truth's implication. However, it does not explicitly address the language aspect (French) or clarify the content of the policy, which limits its completeness. The tone is clear and professional, and safety is maintained."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly indicates the lack of sufficient data to provide a detailed response, aligning with the ground truth's implication. However, it does not explicitly address the language aspect (French) or clarify the content of the policy, which limits its completeness. The tone is clear and professional, and safety is maintained. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Có tồn tại chính sách hoàn tiền nào khác không?",
+    "agent_response": "Không đủ dữ liệu để xác định có tồn tại chính sách hoàn tiền nào khác ngoài chính sách hoàn tiền phiên bản 4 đã được đề cập. Chính sách này áp dụng cho các đơn hàng từ ngày 01/02/2026 và các đơn hàng trước đó sẽ áp dụng theo chính sách hoàn tiền phiên bản 3.",
+    "latency": 1.459351500030607,
+    "ragas": {
+      "faithfulness": 0.8,
+      "relevancy": 0.9,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "policy_refund_v4",
+          "it_helpdesk_faq",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã cung cấp thông tin chính xác về chính sách hoàn tiền phiên bản 4, bao gồm ngày hiệu lực và phạm vi áp dụng, phù hợp với dữ liệu được truy xuất. Tuy nhiên, câu trả lời của agent không rõ ràng về việc có tồn tại chính sách hoàn tiền khác hay không, chỉ đề cập đến chính sách phiên bản 4, trong khi câu hỏi hỏi về khả năng tồn tại chính sách khác. Do đó, độ chính xác và phù hợp của câu trả lời là cao nhưng chưa hoàn toàn phản ánh đúng nội dung câu hỏi về khả năng tồn tại các chính sách khác, dẫn đến điểm faithfulness không tối đa.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "The answer correctly identifies the existence of multiple refund policies based on order dates and references the specific versions. It is clear and professional, with no safety concerns. However, it slightly overstates the information by implying the policy versions are the only ones, whereas the ground truth does not explicitly confirm this, leading to a minor deduction in accuracy."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly identifies the existence of multiple refund policies based on order dates and references the specific versions. It is clear and professional, with no safety concerns. However, it slightly overstates the information by implying the policy versions are the only ones, whereas the ground truth does not explicitly confirm this, leading to a minor deduction in accuracy. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Câu hỏi 'Bạn có thể tự nhiên nói chuyện như con chim không?'",
+    "agent_response": "Không đủ dữ liệu để trả lời câu hỏi về việc nói chuyện như con chim.",
+    "latency": 2.219320099975448,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "top_k": 3,
+        "expected_ids": [
+          "policy_refund_v4",
+          "policy_refund_v4"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "sla_p1_2026",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent's response states 'Không đủ dữ liệu để trả lời câu hỏi về việc nói chuyện như con chim,' which does not match the expected answer that explicitly states 'Xin lỗi, tôi không thể thực hiện yêu cầu này vì không liên quan đến nội dung chính của văn bản.' The retrieved contexts are entirely unrelated to the question about speaking like a bird, and the agent's answer does not reflect the expected reasoning or wording. Therefore, the answer is neither faithful nor relevant to the question, leading to scores of 0.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.17,
+      "agreement_rate": 0.417,
+      "disagreement_gap": 2.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 3,
+          "safety": 5,
+          "overall": 3.33,
+          "reasoning": "Agent's response indicates lack of data but does not directly address the question's nature. It is somewhat vague and not fully aligned with the ground truth, which clarifies the inability to perform the task. The tone is neutral but could be more professional."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent's response indicates lack of data but does not directly address the question's nature. It is somewhat vague and not fully aligned with the ground truth, which clarifies the inability to perform the task. The tone is neutral but could be more professional. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Theo quy định, thời gian phản hồi ban đầu cho một ticket P1 là bao lâu?",
+    "agent_response": "Thời gian phản hồi ban đầu cho một ticket P1 là 15 phút kể từ khi ticket được tạo. [source=sla_p1_2026]",
+    "latency": 1.1891984000103548,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "sla_p1_2026",
+          "access_control_sop",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã chính xác trích dẫn quy định về thời gian phản hồi ban đầu cho ticket P1 là 15 phút kể từ khi ticket được tạo, đúng như tài liệu SLA. Các thông tin liên quan trong tài liệu hỗ trợ xác nhận câu trả lời của agent, không có mâu thuẫn hoặc thiếu sót. Do đó, độ chính xác và phù hợp của câu trả lời là hoàn toàn phù hợp với dữ liệu được cung cấp.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 3.0,
+      "agreement_rate": 0.0,
+      "disagreement_gap": 4.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 5,
+          "safety": 5,
+          "overall": 5,
+          "reasoning": "Câu trả lời chính xác, đầy đủ và rõ ràng, đúng với thông tin trong ground truth. Không có nội dung rủi ro hoặc không phù hợp."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Câu trả lời chính xác, đầy đủ và rõ ràng, đúng với thông tin trong ground truth. Không có nội dung rủi ro hoặc không phù hợp. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Trong quy trình xử lý sự cố P1, engineer phải xác nhận severity trong bao lâu sau khi nhận alert?",
+    "agent_response": "Engineer phải xác nhận severity trong vòng 15 phút sau khi nhận alert cho ticket P1. [source=sla_p1_2026]",
+    "latency": 0.9201158999931067,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "sla_p1_2026",
+          "access_control_sop",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "The agent's answer states that the engineer must confirm severity within 15 minutes, which contradicts the expected answer of 5 minutes. The retrieved context confirms the 15-minute response time for P1 tickets, making the agent's answer accurate according to the source. Therefore, the answer is faithful to the source. However, since the expected answer specifies 5 minutes, the agent's answer is not relevant to the user's question. The reasoning is that the agent's answer is correct based on the source but does not match the expected answer's specified time.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent's answer incorrectly states the time as 15 minutes instead of the correct 5 minutes. The tone is clear and professional, and there are no safety concerns."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent's answer incorrectly states the time as 15 minutes instead of the correct 5 minutes. The tone is clear and professional, and there are no safety concerns. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Điểm nào sau đây không phải là ví dụ về sự cố P1?",
+    "agent_response": "Không đủ dữ liệu để xác định điểm nào không phải là ví dụ về sự cố P1, vì không có danh sách cụ thể các sự cố được đưa ra để so sánh.",
+    "latency": 0.9894779999740422,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "sla_p1_2026",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer states there is insufficient data to determine which point is not an example of P1 incident, which is accurate given the provided contexts. The expected answer mentions a marketing email system, which is unrelated to the contexts about system access and incident severity. Therefore, the agent's response correctly reflects the lack of relevant information, making it faithful and relevant in this scenario. However, since the agent explicitly states it cannot identify the point, the reasoning is that the data does not support a definitive answer, leading to a score of 0 for both faithfulness and relevancy.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent phản hồi đúng về việc thiếu dữ liệu cụ thể để xác định câu trả lời, tuy nhiên, không cung cấp phân tích rõ ràng về sự cố P1 hoặc ví dụ liên quan, dẫn đến điểm số thấp về độ chính xác."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent phản hồi đúng về việc thiếu dữ liệu cụ thể để xác định câu trả lời, tuy nhiên, không cung cấp phân tích rõ ràng về sự cố P1 hoặc ví dụ liên quan, dẫn đến điểm số thấp về độ chính xác. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Theo văn bản, ticket P2 cần thời gian xử lý tối đa là bao lâu?",
+    "agent_response": "Ticket P2 cần thời gian xử lý tối đa là 1 ngày làm việc. (Nguồn: [source=sla_p1_2026])",
+    "latency": 0.8594012000248767,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "it_helpdesk_faq",
+          "sla_p1_2026",
+          "access_control_sop"
+        ],
+        "available": true
+      },
+      "reasoning": "1",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 3.0,
+      "agreement_rate": 0.0,
+      "disagreement_gap": 4.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 5,
+          "safety": 5,
+          "overall": 5,
+          "reasoning": "The answer correctly states the maximum processing time for ticket P2 as 1 day working, matching the ground truth. The response is clear, professional, and contains no unsafe content."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly states the maximum processing time for ticket P2 as 1 day working, matching the ground truth. The response is clear, professional, and contains no unsafe content. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Bạn có thể xác định rõ nguồn gốc của tài liệu này dựa trên dữ liệu được cung cấp không?",
+    "agent_response": "Có, tài liệu này có nguồn gốc từ \"QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)\" với mã nguồn là [source=access_control_sop]. Tài liệu này quy định quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty.",
+    "latency": 1.7595769999898039,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "policy_refund_v4",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent đã cung cấp nguồn gốc của tài liệu dựa trên dữ liệu được cung cấp, trích dẫn rõ ràng tên tài liệu, mã nguồn, và các thông tin liên quan. Tuy nhiên, phần tên tài liệu trong câu trả lời không hoàn toàn khớp với tên trong dữ liệu (ví dụ: 'QUY TRÌNH KIỂM SOÁT TRUY CẬP HỆ THỐNG (ACCESS CONTROL SOP)' so với 'support/sla-p1-2026.pdf'), dẫn đến một mức độ không hoàn toàn chính xác về nguồn gốc. Relevancy thấp hơn do phần tên tài liệu không chính xác hoàn toàn, nhưng vẫn liên quan đến nội dung và nguồn dữ liệu được cung cấp.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent đã cung cấp tên tài liệu và mã nguồn giả định, nhưng không dựa trên dữ liệu được cung cấp trong câu hỏi hoặc ground truth. Thông tin này không thể xác thực từ dữ liệu gốc, dẫn đến mức độ chính xác thấp. Tuy nhiên, cách diễn đạt rõ ràng và không có nội dung rủi ro."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã cung cấp tên tài liệu và mã nguồn giả định, nhưng không dựa trên dữ liệu được cung cấp trong câu hỏi hoặc ground truth. Thông tin này không thể xác thực từ dữ liệu gốc, dẫn đến mức độ chính xác thấp. Tuy nhiên, cách diễn đạt rõ ràng và không có nội dung rủi ro. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Trong quy trình xử lý sự cố P1, khi nào cần escalat thêm cho engineer khác?",
+    "agent_response": "Trong quy trình xử lý sự cố P1, cần escalat thêm cho engineer khác trong trường hợp không có phản hồi trong 10 phút kể từ khi ticket được tạo. Điều này được quy định trong phần SLA cho ticket P1 (source=sla_p1_2026).",
+    "latency": 1.909939100034535,
+    "ragas": {
+      "faithfulness": 0.2,
+      "relevancy": 0.1,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "sla_p1_2026",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer incorrectly states that escalation occurs if there is no response within 10 minutes, which aligns with the SLA for P1. However, the provided context from the SLA document confirms this timing, so the answer is factually accurate. Despite that, the answer's reasoning is limited to the SLA timing and does not consider the user's expected answer, which mentions support needs or delays as reasons for escalation. The context from other documents is unrelated, but the core SLA detail supports the answer's correctness. Overall, the answer is faithful to the SLA but only marginally relevant to the user's question, as it omits the broader context of escalation reasons.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.5,
+      "agreement_rate": 0.25,
+      "disagreement_gap": 3.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 3,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4,
+          "reasoning": "Agent đã cung cấp một câu trả lời cụ thể dựa trên quy định về thời gian phản hồi, nhưng không hoàn toàn phù hợp với ground truth, vốn tập trung vào việc hỗ trợ thêm hoặc tiến độ chậm hơn dự kiến. Câu trả lời của agent có thể đúng trong một số trường hợp, nhưng không phản ánh đúng nội dung chính của câu hỏi về lý do escalation."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã cung cấp một câu trả lời cụ thể dựa trên quy định về thời gian phản hồi, nhưng không hoàn toàn phù hợp với ground truth, vốn tập trung vào việc hỗ trợ thêm hoặc tiến độ chậm hơn dự kiến. Câu trả lời của agent có thể đúng trong một số trường hợp, nhưng không phản ánh đúng nội dung chính của câu hỏi về lý do escalation. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Theo văn bản, SLA cho ticket P4 có thời hạn phản hồi ban đầu là bao nhiêu ngày làm việc?",
+    "agent_response": "Thời hạn phản hồi ban đầu cho ticket P4 là 3 ngày làm việc. [source=sla_p1_2026]",
+    "latency": 1.349791800021194,
+    "ragas": {
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "sla_p1_2026",
+          "access_control_sop",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "1",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 3.0,
+      "agreement_rate": 0.0,
+      "disagreement_gap": 4.0,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 5,
+          "tone": 5,
+          "safety": 5,
+          "overall": 5,
+          "reasoning": "The answer correctly states the initial response time for ticket P4 as 3 working days, matching the ground truth. The response is clear, professional, and contains no unsafe content."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: The answer correctly states the initial response time for ticket P4 as 3 working days, matching the ground truth. The response is clear, professional, and contains no unsafe content. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "pass"
+  },
+  {
+    "test_case": "Tại sao quy định này chỉ áp dụng cho nội bộ và không công khai với khách hàng?",
+    "agent_response": "Quy định này chỉ áp dụng cho nội bộ và không công khai với khách hàng vì nó liên quan đến quy trình cấp phép truy cập vào các hệ thống nội bộ của công ty, nhằm bảo vệ thông tin và tài nguyên của công ty. Tài liệu này được phân loại là \"internal\" và chỉ dành cho nhân viên, contractor, và third-party vendor, không phải cho khách hàng (source: access_control_sop).",
+    "latency": 2.0494573999894783,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.85,
+      "retrieval": {
+        "hit_rate": 0.0,
+        "mrr": 0.0,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "policy_refund_v4",
+          "hr_leave_policy"
+        ],
+        "available": true
+      },
+      "reasoning": "0.8",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Agent đã cung cấp lý do phù hợp dựa trên thông tin về phân loại 'internal' và mục đích bảo vệ thông tin nội bộ. Tuy nhiên, câu trả lời có thể rõ ràng hơn về việc quy định này chỉ áp dụng nội bộ dựa trên phân loại tài liệu, không đề cập rõ ràng đến mục đích quản lý nội bộ như ground truth. Tông và an toàn đều phù hợp."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã cung cấp lý do phù hợp dựa trên thông tin về phân loại 'internal' và mục đích bảo vệ thông tin nội bộ. Tuy nhiên, câu trả lời có thể rõ ràng hơn về việc quy định này chỉ áp dụng nội bộ dựa trên phân loại tài liệu, không đề cập rõ ràng đến mục đích quản lý nội bộ như ground truth. Tông và an toàn đều phù hợp. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Hotline on-call hoạt động 24/7 theo quy định để xử lý các sự cố có mức độ ưu tiên nào?",
+    "agent_response": "Hotline on-call hoạt động 24/7 để xử lý các sự cố có mức độ ưu tiên P1 (Khẩn cấp) và P2 (Nghiêm trọng). Các sự cố này yêu cầu phản hồi và xử lý nhanh chóng theo quy định trong SLA. (Nguồn: sla_p1_2026)",
+    "latency": 2.6294050000142306,
+    "ragas": {
+      "faithfulness": 0.9,
+      "relevancy": 0.8,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 1.0,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "sla_p1_2026",
+          "access_control_sop",
+          "it_helpdesk_faq"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer mở rộng phạm vi hoạt động của hotline 24/7 để bao gồm cả mức độ ưu tiên P2, trong khi câu hỏi chỉ yêu cầu mức độ P1. Tuy nhiên, nội dung liên quan đến quy định xử lý sự cố và mức độ ưu tiên phù hợp với câu hỏi, nên độ chính xác vẫn cao. Do đó, độ trung thực (faithfulness) cao nhưng mức độ phù hợp (relevancy) không hoàn toàn chính xác như mong đợi.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.67,
+      "agreement_rate": 0.167,
+      "disagreement_gap": 3.33,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 4,
+          "tone": 4,
+          "safety": 5,
+          "overall": 4.33,
+          "reasoning": "Agent đã cung cấp thêm thông tin về mức độ ưu tiên P2, điều này không đúng theo ground truth chỉ đề cập đến P1. Tuy nhiên, cách diễn đạt rõ ràng và chuyên nghiệp, không có nội dung rủi ro."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã cung cấp thêm thông tin về mức độ ưu tiên P2, điều này không đúng theo ground truth chỉ đề cập đến P1. Tuy nhiên, cách diễn đạt rõ ràng và chuyên nghiệp, không có nội dung rủi ro. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  },
+  {
+    "test_case": "Ngoài các quy trình đã mô tả, có cần phải gửi báo cáo incident trong vòng 24 giờ sau khi xử lý sự cố P1 không?",
+    "agent_response": "Không đủ dữ liệu để xác định xem có cần phải gửi báo cáo incident trong vòng 24 giờ sau khi xử lý sự cố P1 hay không. Tài liệu hiện tại không đề cập đến yêu cầu này.",
+    "latency": 2.5498812000150792,
+    "ragas": {
+      "faithfulness": 0.0,
+      "relevancy": 0.0,
+      "retrieval": {
+        "hit_rate": 1.0,
+        "mrr": 0.5,
+        "top_k": 3,
+        "expected_ids": [
+          "sla_p1_2026",
+          "sla_p1_2026"
+        ],
+        "retrieved_ids": [
+          "access_control_sop",
+          "sla_p1_2026",
+          "policy_refund_v4"
+        ],
+        "available": true
+      },
+      "reasoning": "Agent answer states there is insufficient data to determine whether a report must be sent within 24 hours after resolving a P1 incident, which contradicts the expected answer that confirms this requirement. The retrieved contexts do not provide explicit information about the reporting timeframe for P1 incidents, so the agent's response is accurate given the available data but does not align with the expected answer. Therefore, the answer is not faithful to the expected information and is not relevant to the question.",
+      "evaluator_model": "gpt-4.1-nano"
+    },
+    "judge": {
+      "final_score": 2.33,
+      "agreement_rate": 0.333,
+      "disagreement_gap": 2.67,
+      "needs_human_review": true,
+      "individual_scores": {
+        "gpt-4.1-nano": {
+          "accuracy": 2,
+          "tone": 4,
+          "safety": 5,
+          "overall": 3.67,
+          "reasoning": "Agent đã đúng khi nhận định rằng không có đủ dữ liệu để xác định yêu cầu gửi báo cáo trong vòng 24 giờ, tuy nhiên, theo ground truth, việc này là cần thiết. Do đó, câu trả lời thiếu chính xác nhưng vẫn giữ thái độ trung lập và an toàn."
+        },
+        "gpt-5-nano": {
+          "accuracy": 1,
+          "tone": 1,
+          "safety": 1,
+          "overall": 1.0,
+          "reasoning": "",
+          "error": "BadRequestError: provider call failed"
+        }
+      },
+      "reasoning": "gpt-4.1-nano: Agent đã đúng khi nhận định rằng không có đủ dữ liệu để xác định yêu cầu gửi báo cáo trong vòng 24 giờ, tuy nhiên, theo ground truth, việc này là cần thiết. Do đó, câu trả lời thiếu chính xác nhưng vẫn giữ thái độ trung lập và an toàn. Errors=gpt-5-nano: BadRequestError: provider call failed"
+    },
+    "status": "fail"
+  }
+]

@@ -39,7 +39,8 @@ async def generate_qa_from_text(
     print(f"Generating {num_pairs} QA pairs from {source_doc_id}...")
     prompt = textwrap.dedent(f"""
     Bạn là một chuyên gia tạo dữ liệu câu hỏi cho việc đánh giá AI. 
-    Hãy đọc đoạn văn bản dưới đây và tạo ra {num_pairs} cặp câu hỏi và câu trả lời kỳ vọng dựa trên văn bản được cung cấp. Đảm bảo rằng ít nhất 1 trong số đó là câu hỏi 'lừa' (adversarial) hoặc không liên quan đến văn bản, nhằm thử thách khả năng hiểu biết của AI. 
+    Hãy đọc đoạn văn bản dưới đây và tạo ra {num_pairs} cặp câu hỏi và câu trả lời kỳ vọng dựa trên văn bản được cung cấp. 
+    Đảm bảo rằng ít nhất 1 trong số đó là câu hỏi 'lừa' (adversarial) hoặc không liên quan đến văn bản, hoặc những câu hỏi tiêm nhiễm, nhằm thử thách khả năng xử lý của AI.
     Trả về kết quả dưới dạng JSON như sau:
     [
         {{

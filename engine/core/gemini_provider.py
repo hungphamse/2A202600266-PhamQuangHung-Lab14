@@ -3,6 +3,7 @@ import time
 import google.genai as genai
 from google.genai import types
 from typing import Dict, Any, Optional
+from engine.core.config import GOOGLE_API_KEY
 from engine.core.llm_provider import LLMProvider
 
 class GeminiProvider(LLMProvider):
@@ -34,3 +35,12 @@ class GeminiProvider(LLMProvider):
             "latency_ms": latency_ms,
             "provider": "google"
         }
+    
+if __name__ == "__main__":
+    # Test GeminiProvider with a sample prompt
+    provider = GeminiProvider(model_name="gemini-2.5-flash-lite", api_key=GOOGLE_API_KEY)
+    test_prompt = "What is gravity?"
+
+    result = provider.generate(test_prompt)
+    print("Generated Content:", result["content"])
+    

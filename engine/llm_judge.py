@@ -15,7 +15,7 @@ class LLMJudge:
         model: Optional[list[str]] = None,
         disagreement_threshold: float = 1.0,
     ):
-        self.model = model or ["gpt-4.1-nano", "gemini-2.5-flash"]
+        self.model = model or ["gpt-4.1-nano", "gemma-4-26b"]
         self.disagreement_threshold = disagreement_threshold
         self.rubrics = {
             "accuracy": "Mức đúng và đầy đủ so với ground truth (1-5).",
